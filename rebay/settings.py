@@ -119,8 +119,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'accounts.CustomUser'
 LOGIN_REDIRECT_URL = 'index'
 
-# rabbitmq setting
-
+# celery config
+CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
 
 # SMPT EMAIL SETTINGS
 EMAIL_BACKEND = os.environ.get('EMAIL_BACKEND')

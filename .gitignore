@@ -5,3 +5,4 @@ app/migrations/
 static/
 db.sqlite3
 .env
+*.rdb

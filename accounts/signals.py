@@ -16,6 +16,6 @@ def create_user_profile(sender, instance, created, **kwargs):
             p = Profile.objects.create(user=instance)
             p.save()
             print(p)
-            send_profile_creation_confirmation(p.user.email)
+            send_profile_creation_confirmation.delay(p.user.email)
         except Exception as e:
             print(e)
